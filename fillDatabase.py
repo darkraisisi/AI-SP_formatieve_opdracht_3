@@ -3,11 +3,12 @@ import psycopg2
 def fill():
     c = psycopg2.connect("dbname=OpisOp user=postgres password=root")
     cur = c.cursor()
-
-    filenames = ['products', 'profiles', 'profiles_previously_viewed', 'sessions']
+    path = 'csv/new/'
+    # filenames = ['brand', 'products', 'profiles', 'sessions', 'cart']
+    filenames = ['brand', 'products']
 
     for filename in filenames:
-        with open(filename+'.csv') as csvfile:
+        with open(path+filename+'.csv', encoding='utf-8') as csvfile:
             print("Copying {}...".format(filename))
             cur.copy_expert("COPY "+filename+" FROM STDIN DELIMITER ',' CSV HEADER", csvfile)
             c.commit()

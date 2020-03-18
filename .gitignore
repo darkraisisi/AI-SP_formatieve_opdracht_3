@@ -1,5 +1,7 @@
 csv/trash/*
-
+csv/new/*
+.mwb.bak
+database/db_schema.mwb.bak
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -129,3 +131,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
