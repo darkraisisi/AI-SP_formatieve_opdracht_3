@@ -14,7 +14,7 @@ def run():
     collab_recommendations(
         ['BOUNCER','JUDGER','LEAVER','BUYER','BROWSER','COMPARER','FUN_SHOPPER'],
         ['familie'])
-    content_recommendations()
+    # content_recommendations()
 
     connection.commit()
     cursor.close()
