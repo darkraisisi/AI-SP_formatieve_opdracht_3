@@ -9,6 +9,6 @@ CREATE TABLE  collab_recommendations(
 DROP TABLE IF EXISTS content_recommendations CASCADE;
 
 CREATE TABLE  content_recommendations(
-    product_id VARCHAR(255),
+    category VARCHAR(255),
     product_recommendation VARCHAR(255)
 );
